@@ -82,15 +82,15 @@
 
       <section class="section" id="includes">
         <div class="section-heading">
-          <p class="eyebrow">04 · Carve core includes</p>
+          <p class="eyebrow">04 · Database-backed includes</p>
           <h2>Compose documents from reusable sources</h2>
-          <p>Includes use a resolver supplied by the application, so content may come from files, database snippets, or another trusted source. This demo expands a chapter and its nested include beneath an explicit filesystem root; automatic heading shifts preserve the assembled outline.</p>
+          <p>A container-injected resolver backed by an in-memory SQLite repository loads Carve snippets from rows. The included row references a sibling row relatively, automatic heading shifts preserve the assembled outline, and content revisions invalidate cached output.</p>
         </div>
         <div class="output-grid">
-          <article class="output-card"><span class="output-label">handbook.crv</span><div class="preformatted">{!! $includeSource !!}</div></article>
+          <article class="output-card"><span class="output-label">Parent document</span><div class="preformatted">{!! $includeSource !!}</div></article>
           <article class="output-card output-html"><span class="output-label">Expanded result</span><div class="carve">{!! $includeHtml !!}</div></article>
         </div>
-        <p class="dependency-line">Tracked dependencies: <span class="diagnostic-code">{{ implode(', ', $includeDependencies) }}</span></p>
+        <p class="dependency-line">Tracked dependencies: <span class="diagnostic-code">{{ implode(', ', $includeDependencies) }}</span> · {{ $includeWarnings }} warnings</p>
       </section>
 
       <section class="section diagnostics" id="diagnostics">

@@ -1,4 +1,0 @@
-# Nested include
-
-Includes may be recursive. Carve records every dependency for preview rebuilds
-while enforcing path containment, depth, byte, resolver-call, and warning limits.

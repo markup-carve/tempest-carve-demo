@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f714af65841e95275b5d23a8aa1dbcb9",
+    "content-hash": "4b82645565ad40dac06b2c102ab193ac",
     "packages": [
         {
             "name": "composer/semver",
@@ -1470,12 +1470,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/markup-carve/carve-php.git",
-                "reference": "a8e4bab9067e82f1c33ba810b79a9b6126903c14"
+                "reference": "bc5c3a9f4da226c0e71585194ecb7a8070242cb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/markup-carve/carve-php/zipball/a8e4bab9067e82f1c33ba810b79a9b6126903c14",
-                "reference": "a8e4bab9067e82f1c33ba810b79a9b6126903c14",
+                "url": "https://api.github.com/repos/markup-carve/carve-php/zipball/bc5c3a9f4da226c0e71585194ecb7a8070242cb0",
+                "reference": "bc5c3a9f4da226c0e71585194ecb7a8070242cb0",
                 "shasum": ""
             },
             "require": {
@@ -1533,7 +1533,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-09-15T16:20:05+00:00"
+            "time": "2026-09-15T21:10:04+00:00"
         },
         {
             "name": "markup-carve/tempest-carve",
@@ -1541,16 +1541,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/markup-carve/tempest-carve.git",
-                "reference": "0abc94cbe310003c1596925291454bf65c26f895"
+                "reference": "ec0a8d4c62ea8c888e2eaee991666f20765b0e58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/markup-carve/tempest-carve/zipball/0abc94cbe310003c1596925291454bf65c26f895",
-                "reference": "0abc94cbe310003c1596925291454bf65c26f895",
+                "url": "https://api.github.com/repos/markup-carve/tempest-carve/zipball/ec0a8d4c62ea8c888e2eaee991666f20765b0e58",
+                "reference": "ec0a8d4c62ea8c888e2eaee991666f20765b0e58",
                 "shasum": ""
             },
             "require": {
-                "markup-carve/carve-php": "^0.1.7",
+                "markup-carve/carve-php": "dev-main as 0.1.999",
                 "php": "^8.5",
                 "tempest/cache": "^3.19",
                 "tempest/view": "^3.19"
@@ -1561,6 +1561,9 @@
                 "phpunit/phpunit": "^12.5",
                 "symfony/cache": "^7.3 || ^8.0",
                 "tempest/framework": "^3.19"
+            },
+            "suggest": {
+                "phpunit/phpunit": "Required to use the optional CarveAssertions testing trait."
             },
             "default-branch": true,
             "type": "library",
@@ -1600,7 +1603,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-09-15T16:05:45+00:00"
+            "time": "2026-09-15T21:46:37+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -6843,6 +6846,8 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
+        "ext-pdo": "*",
+        "ext-pdo_sqlite": "*",
         "php": "^8.5"
     },
     "platform-dev": {},

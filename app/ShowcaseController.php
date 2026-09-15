@@ -4,13 +4,10 @@ declare(strict_types=1);
 
 namespace App;
 
-use MarkupCarve\Carve\CarveConverter;
-use MarkupCarve\Carve\Transform\FilesystemIncludeResolver;
-use MarkupCarve\Carve\Transform\IncludeDependency;
-use MarkupCarve\Carve\Transform\IncludeExpander;
 use MarkupCarve\Tempest\CarveConfig;
 use MarkupCarve\Tempest\CarveProfile;
 use MarkupCarve\Tempest\CarveRenderer;
+use MarkupCarve\Tempest\IncludeOptions;
 use MarkupCarve\Tempest\RenderReport;
 use Tempest\Router\Get;
 use Tempest\Router\StaticPage;
@@ -46,6 +43,7 @@ final readonly class ShowcaseController
             includeSource: $this->escaped($includes['source']),
             includeHtml: $includes['html'],
             includeDependencies: $includes['dependencies'],
+            includeWarnings: $includes['warnings'],
         );
     }
 
@@ -122,31 +120,24 @@ final readonly class ShowcaseController
     }
 
     /**
-     * @return array{source: string, html: string, dependencies: list<string>}
+     * @return array{source: string, html: string, dependencies: list<string>, warnings: int}
      */
     private function includes(): array
     {
-        $source = "# Composed handbook\n\n{{ chapters/overview.crv @shift:auto }}";
-        $contentRoot = __DIR__ . '/content';
-        $converter = new CarveConverter(safeMode: true, sourceLines: true);
-        $document = $converter->parse($source);
-        $expander = new IncludeExpander(
-            resolver: new FilesystemIncludeResolver($contentRoot),
-            currentPath: 'handbook.crv',
-            source: $source,
+        $source = "# Composed handbook\n\n{{ /handbook/overview @shift:auto }}";
+        $result = $this->carve->renderIncluded(
+            $source,
+            new IncludeOptions(currentPath: 'db:handbook/root'),
         );
-        $expanded = $converter->transform($document, $expander);
 
         return [
             'source' => $source,
-            'html' => $converter->render($expanded),
+            'html' => $result->html,
             'dependencies' => array_map(
-                static fn (IncludeDependency $dependency): string => ltrim(
-                    str_replace($contentRoot, '', $dependency->getTarget()),
-                    DIRECTORY_SEPARATOR,
-                ),
-                $expander->getDependencies(),
+                static fn (array $dependency): string => $dependency['target'],
+                $result->dependencies,
             ),
+            'warnings' => count($result->warnings),
         ];
     }
 }
