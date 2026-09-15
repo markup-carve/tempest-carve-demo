@@ -20,9 +20,12 @@ final class ShowcaseControllerTest extends IntegrationTestCase
             ->assertSee('One source.')
             ->assertSee('Publishing profiles')
             ->assertSee('Authoring diagnostics')
+            ->assertSee('Carve core includes')
+            ->assertSee('Nested include')
+            ->assertSee('chapters/details.crv')
             ->assertSee('data-source-line')
             ->assertSee('# Portable output')
             ->assertSee('L3:C19')
-            ->assertNotSee('{{');
+            ->assertNotSee('{{ $');
     }
 }

@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.5'
+          coverage: none
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install PHP dependencies
+        run: composer install --prefer-dist --no-progress --no-interaction
+
+      - name: Install frontend dependencies
+        run: npm ci
+
+      - name: Prepare application
+        run: |
+          cp .env.example .env
+          php tempest key:generate
+
+      - name: Check PHP formatting
+        run: composer github:fmt
+
+      - name: Lint PHP
+        run: composer github:lint
+
+      - name: Analyse PHP
+        run: composer github:analyse
+
+      - name: Test PHP
+        run: composer github:test
+
+      - name: Build frontend assets
+        run: npm run build
+
+      - name: Generate static site
+        run: php tempest static:generate --crawl

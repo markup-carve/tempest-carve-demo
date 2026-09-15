@@ -80,6 +80,8 @@ main { max-width: 1240px; margin: auto; padding: 0 max(5vw, 1.5rem); }
 .output-terminal { background: #102d25; }
 .output-terminal .output-label { color: #d8ff65; }
 .output-terminal .preformatted { color: #d9e5df; }
+.dependency-line { margin-top: 1rem; color: #5c6863; }
+.dependency-line code { overflow-wrap: anywhere; }
 
 .diagnostics { border-bottom: 0; }
 .diagnostic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }

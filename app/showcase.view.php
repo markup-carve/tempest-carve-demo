@@ -11,10 +11,11 @@
   <div class="page-shell">
     <header class="hero">
       <nav class="nav" aria-label="Primary navigation">
-        <a class="brand" href="/">Tempest <span>×</span> Carve</a>
+        <a class="brand" href="./">Tempest <span>×</span> Carve</a>
         <div class="nav-links">
           <a href="#profiles">Profiles</a>
           <a href="#outputs">Outputs</a>
+          <a href="#includes">Includes</a>
           <a href="#diagnostics">Diagnostics</a>
         </div>
       </nav>
@@ -79,9 +80,22 @@
         </div>
       </section>
 
+      <section class="section" id="includes">
+        <div class="section-heading">
+          <p class="eyebrow">04 · Carve core includes</p>
+          <h2>Compose documents from files</h2>
+          <p>The latest carve-php core runs inside the Tempest app to resolve a chapter and its nested include beneath an explicit filesystem root. Automatic heading shifts preserve the assembled outline.</p>
+        </div>
+        <div class="output-grid">
+          <article class="output-card"><span class="output-label">handbook.crv</span><div class="preformatted">{!! $includeSource !!}</div></article>
+          <article class="output-card output-html"><span class="output-label">Expanded result</span><div class="carve">{!! $includeHtml !!}</div></article>
+        </div>
+        <p class="dependency-line">Tracked dependencies: <span class="diagnostic-code">{{ implode(', ', $includeDependencies) }}</span></p>
+      </section>
+
       <section class="section diagnostics" id="diagnostics">
         <div class="section-heading">
-          <p class="eyebrow">04 · Authoring diagnostics</p>
+          <p class="eyebrow">05 · Authoring diagnostics</p>
           <h2>Explain every compromise</h2>
           <p><code>renderWithReport()</code> combines safe HTML with source-aware warnings, profile violations, and bounded target-loss reporting.</p>
         </div>
@@ -114,8 +128,8 @@
       </section>
 
       <section class="section feature-strip">
-        <article><span>05</span><h3>Source lines</h3><p>Supported blocks in the main preview carry a <code>data-source-line</code> anchor for scroll synchronization.</p></article>
-        <article><span>06</span><h3>Content cache</h3><p>The configured renderer stores deterministic output by source, format, profile, options, extensions, and engine version.</p><p class="feature-note">Enabled through Tempest Cache with a one-hour expiration.</p></article>
+        <article><span>06</span><h3>Source lines</h3><p>Supported blocks in the main preview carry a <code>data-source-line</code> anchor for scroll synchronization.</p></article>
+        <article><span>07</span><h3>Content cache</h3><p>The configured renderer stores deterministic output by source, format, profile, options, extensions, and engine version.</p><p class="feature-note">Enabled through Tempest Cache with a one-hour expiration.</p></article>
         <article><span>∞</span><h3>Safe by default</h3><p>Raw HTML is escaped in HTML and Markdown, omitted from plain text, and represented only as text in ANSI.</p></article>
       </section>
     </main>
