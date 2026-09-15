@@ -1,0 +1,7 @@
+* text=auto eol=lf
+
+*.css linguist-detectable=true
+*.php diff=php
+
+/.github export-ignore
+/tests export-ignore
