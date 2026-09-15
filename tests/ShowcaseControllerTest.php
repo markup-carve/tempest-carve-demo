@@ -26,6 +26,8 @@ final class ShowcaseControllerTest extends IntegrationTestCase
             ->assertSee('db:handbook/overview')
             ->assertSee('db:handbook/details')
             ->assertSee('0 warnings')
+            ->assertSee('https://markup-carve.github.io/carve/')
+            ->assertSee('https://github.com/markup-carve/tempest-carve')
             ->assertSee('data-source-line')
             ->assertSee('# Portable output')
             ->assertSee('L3:C19')
