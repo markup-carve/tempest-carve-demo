@@ -24,7 +24,7 @@
         <div>
           <p class="eyebrow">Safe document rendering for Tempest</p>
           <h1>One source.<br><em>Every publishing surface.</em></h1>
-          <p class="lede">A complete local tour of the Tempest integration: view components, profiles, extensions, caching, diagnostics, editor source lines, and four output formats.</p>
+          <p class="lede">A complete tour of the Tempest integration: view components, profiles, extensions, caching, diagnostics, editor source lines, and four output formats.</p>
           <div class="pills" aria-label="Enabled configuration">
             <span>Safe mode</span><span>Cached</span><span>Source lines</span><span>Heading numbers</span>
           </div>
@@ -134,7 +134,7 @@
       </section>
     </main>
 
-    <footer><span>Local Tempest application</span><span>Powered by <code>markup-carve/tempest-carve</code></span></footer>
+    <footer><span>Tempest Carve demo</span><span>Powered by <code>markup-carve/tempest-carve</code></span></footer>
   </div>
 </body>
 </html>
