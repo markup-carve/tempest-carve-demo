@@ -134,7 +134,7 @@
       </section>
     </main>
 
-    <footer><span>Tempest Carve demo</span><span>Powered by <code>markup-carve/tempest-carve</code></span></footer>
+    <footer><span>Tempest <a href="https://markup-carve.github.io/carve/">Carve</a> demo</span><span>Powered by <a href="https://github.com/markup-carve/tempest-carve"><code>markup-carve/tempest-carve</code></a></span></footer>
   </div>
 </body>
 </html>
