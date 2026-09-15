@@ -83,8 +83,8 @@
       <section class="section" id="includes">
         <div class="section-heading">
           <p class="eyebrow">04 · Carve core includes</p>
-          <h2>Compose documents from files</h2>
-          <p>The latest carve-php core runs inside the Tempest app to resolve a chapter and its nested include beneath an explicit filesystem root. Automatic heading shifts preserve the assembled outline.</p>
+          <h2>Compose documents from reusable sources</h2>
+          <p>Includes use a resolver supplied by the application, so content may come from files, database snippets, or another trusted source. This demo expands a chapter and its nested include beneath an explicit filesystem root; automatic heading shifts preserve the assembled outline.</p>
         </div>
         <div class="output-grid">
           <article class="output-card"><span class="output-label">handbook.crv</span><div class="preformatted">{!! $includeSource !!}</div></article>

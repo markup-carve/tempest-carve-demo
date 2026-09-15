@@ -38,7 +38,7 @@ by GitHub Actions.
 | Profiles | Full, article, comment, and minimal policies side by side |
 | Outputs | HTML, Markdown, plain text, and ANSI from one source |
 | Diagnostics | Parser warnings, profile violations, and bounded render losses |
-| Carve core includes | Latest `carve-php` `dev-main`: contained recursive includes, heading shifts, and dependency tracking inside Tempest |
+| Carve core includes | Latest `carve-php` `dev-main`: recursive includes through a contained filesystem resolver, with heading shifts and dependency tracking. The resolver interface also accepts database or other trusted application sources. |
 | Extensions | Container-discovered heading numbering |
 | Application support | Tempest Cache and source-line annotations |
 | Security | Safe raw-content handling across output targets |
