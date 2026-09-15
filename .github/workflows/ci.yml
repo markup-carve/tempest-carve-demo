@@ -31,6 +31,11 @@ jobs:
       - name: Install frontend dependencies
         run: npm ci
 
+      - name: Prepare application
+        run: |
+          cp .env.example .env
+          php tempest key:generate
+
       - name: Check PHP formatting
         run: composer github:fmt
 
