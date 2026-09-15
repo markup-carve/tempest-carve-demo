@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use App\DatabaseIncludeResolver;
 use MarkupCarve\Carve\Extension\HeadingNumbersExtension;
 use MarkupCarve\Carve\Renderer\SmartTypographyMode;
 use MarkupCarve\Carve\Renderer\SoftBreakMode;
@@ -17,4 +18,5 @@ return new CarveConfig(
     extensions: [HeadingNumbersExtension::class],
     cacheEnabled: true,
     cacheExpiration: Duration::hours(1),
+    includeResolver: DatabaseIncludeResolver::class,
 );

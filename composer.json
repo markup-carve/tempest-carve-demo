@@ -4,6 +4,8 @@
     "keywords": ["carve", "markup", "tempest", "demo"],
     "type": "project",
     "require": {
+        "ext-pdo": "*",
+        "ext-pdo_sqlite": "*",
         "php": "^8.5",
         "markup-carve/tempest-carve": "dev-main",
         "tempest/framework": "^3.0",
