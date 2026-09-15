@@ -1,0 +1,6 @@
+# Included chapter
+
+This chapter lives in its own `.crv` file. The include transform safely resolves
+it below the configured content root and shifts this heading beneath its parent.
+
+{{ details.crv @shift:auto }}
