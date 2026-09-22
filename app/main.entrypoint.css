@@ -42,6 +42,9 @@ main { max-width: 1240px; margin: auto; padding: 0 max(5vw, 1.5rem); }
 .section { padding: 7rem 0; border-bottom: 1px solid #c9c6bd; }
 .section-heading { max-width: 760px; margin-bottom: 3rem; }
 .section-heading h2 { margin: 0 0 1rem; font-size: clamp(2.35rem, 5vw, 4.5rem); line-height: 1; letter-spacing: -.055em; }
+.section-copy-link { color: #6f947f; cursor: pointer; font: inherit; font-size: .55em; line-height: 1; padding: .15em; text-decoration: none; vertical-align: .18em; }
+.section-copy-link:hover, .section-copy-link:focus-visible { color: #176f56; text-decoration: underline; }
+.section-copy-link[data-copied="true"] { color: #176f56; }
 .section-heading > p:last-child { color: #5c6863; font-size: 1.05rem; line-height: 1.7; }
 .section-heading code { color: #294e42; background: #dce2dc; border-radius: 5px; padding: .1rem .35rem; font-size: .85em; }
 .paper { background: #fffdf7; border-radius: 6px; padding: clamp(2rem, 6vw, 5rem); box-shadow: 0 20px 70px #3b4b4430; border-top: 6px solid #d8ff65; }

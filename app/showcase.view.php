@@ -40,7 +40,7 @@
       <section class="section component-demo" id="component">
         <div class="section-heading">
           <p class="eyebrow">01 · View component</p>
-          <h2>Drop Carve into a Tempest view</h2>
+          <h2>Drop Carve into a Tempest view <a class="section-copy-link" href="#component" data-copy-section-link aria-label="Copy link to Drop Carve into a Tempest view">#</a></h2>
           <p>The output below comes directly from <code>&lt;x-carve :content="$componentSource" /&gt;</code>. The application config enables safe mode, source-line annotations, heading numbering, smart typography, and Tempest Cache.</p>
         </div>
         <div class="paper carve">
@@ -51,7 +51,7 @@
       <section class="section" id="profiles">
         <div class="section-heading">
           <p class="eyebrow">02 · Publishing profiles</p>
-          <h2>Match the vocabulary to the context</h2>
+          <h2>Match the vocabulary to the context <a class="section-copy-link" href="#profiles" data-copy-section-link aria-label="Copy link to Match the vocabulary to the context">#</a></h2>
           <p>The same document is filtered through each carve-php profile. Restricted constructs degrade to text instead of disappearing silently.</p>
         </div>
         <div class="profile-grid">
@@ -69,7 +69,7 @@
       <section class="section" id="outputs">
         <div class="section-heading">
           <p class="eyebrow">03 · Output formats</p>
-          <h2>Render once for every channel</h2>
+          <h2>Render once for every channel <a class="section-copy-link" href="#outputs" data-copy-section-link aria-label="Copy link to Render once for every channel">#</a></h2>
           <p>HTML for pages, Markdown for interchange, plain text for search and excerpts, and ANSI for the terminal.</p>
         </div>
         <div class="output-grid">
@@ -83,7 +83,7 @@
       <section class="section" id="includes">
         <div class="section-heading">
           <p class="eyebrow">04 · Database-backed includes</p>
-          <h2>Compose documents from reusable sources</h2>
+          <h2>Compose documents from reusable sources <a class="section-copy-link" href="#includes" data-copy-section-link aria-label="Copy link to Compose documents from reusable sources">#</a></h2>
           <p>A container-injected resolver backed by an in-memory SQLite repository loads Carve snippets from rows. The included row references a sibling row relatively, automatic heading shifts preserve the assembled outline, and content revisions invalidate cached output.</p>
         </div>
         <div class="output-grid">
@@ -96,7 +96,7 @@
       <section class="section diagnostics" id="diagnostics">
         <div class="section-heading">
           <p class="eyebrow">05 · Authoring diagnostics</p>
-          <h2>Explain every compromise</h2>
+          <h2>Explain every compromise <a class="section-copy-link" href="#diagnostics" data-copy-section-link aria-label="Copy link to Explain every compromise">#</a></h2>
           <p><code>renderWithReport()</code> combines safe HTML with source-aware warnings, profile violations, and bounded target-loss reporting.</p>
         </div>
         <div class="diagnostic-grid">
