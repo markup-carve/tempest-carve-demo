@@ -111,6 +111,20 @@ final readonly class ShowcaseController
         ```=html
         <script>alert('This is escaped, never executed')</script>
         ```
+
+        ## New in the 0.1.11 wave
+
+        - A lone plus attaches the next block to this item
+        +
+        > This quote belongs to the item above, with no indentation.
+        - The list stays tight
+
+        {table}
+        ```csv
+        Target,Output
+        HTML,Safe markup
+        "Plain text, ANSI",Terminals and mail
+        ```
         CARVE;
     }
 

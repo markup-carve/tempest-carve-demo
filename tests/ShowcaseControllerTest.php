@@ -35,4 +35,14 @@ final class ShowcaseControllerTest extends IntegrationTestCase
             ->assertSee('L3:C19')
             ->assertNotSee('{{ $');
     }
+
+    #[Test]
+    public function index_shows_the_continuation_marker_and_a_csv_table(): void
+    {
+        $this->http
+            ->get('/')
+            ->assertOk()
+            ->assertSee('<td>Plain text, ANSI</td>')
+            ->assertNotSee('<p>+</p>');
+    }
 }

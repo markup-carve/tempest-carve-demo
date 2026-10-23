@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4b82645565ad40dac06b2c102ab193ac",
+    "content-hash": "101510a516d0d41fa5b6cdfbf2688bf6",
     "packages": [
         {
             "name": "composer/semver",
@@ -1466,16 +1466,16 @@
         },
         {
             "name": "markup-carve/carve-php",
-            "version": "dev-main",
+            "version": "0.1.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/markup-carve/carve-php.git",
-                "reference": "bc5c3a9f4da226c0e71585194ecb7a8070242cb0"
+                "reference": "8f1822274f6ae89ba5728107ec6458a35ace5311"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/markup-carve/carve-php/zipball/bc5c3a9f4da226c0e71585194ecb7a8070242cb0",
-                "reference": "bc5c3a9f4da226c0e71585194ecb7a8070242cb0",
+                "url": "https://api.github.com/repos/markup-carve/carve-php/zipball/8f1822274f6ae89ba5728107ec6458a35ace5311",
+                "reference": "8f1822274f6ae89ba5728107ec6458a35ace5311",
                 "shasum": ""
             },
             "require": {
@@ -1489,9 +1489,9 @@
                 "phpunit/phpunit": "^11.0 || ^12.0 || ^13.0"
             },
             "suggest": {
+                "ext-dom": "Required for HTML import and HTML heading-ID conversion.",
                 "ext-intl": "Recommended for heading-ID transliteration: enables ICU romanization of non-Latin scripts (e.g. CJK, Arabic). Without it, a baked map covers Latin/Cyrillic/punctuation identically and other scripts fall back to the generated `section` id."
             },
-            "default-branch": true,
             "bin": [
                 "bin/carve"
             ],
@@ -1515,7 +1515,7 @@
                     "homepage": "https://github.com/php-collective"
                 }
             ],
-            "description": "PHP parser for Carve, a human-centered lightweight markup language derived from Markdown and Djot.",
+            "description": "PHP parser for Carve, a lightweight markup language for documents and the web.",
             "homepage": "https://markup-carve.github.io/carve/",
             "keywords": [
                 "carve",
@@ -1525,7 +1525,7 @@
             ],
             "support": {
                 "issues": "https://github.com/markup-carve/carve-php/issues",
-                "source": "https://github.com/markup-carve/carve-php/tree/main"
+                "source": "https://github.com/markup-carve/carve-php/tree/0.1.14"
             },
             "funding": [
                 {
@@ -1533,29 +1533,33 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-09-15T21:10:04+00:00"
+            "time": "2026-10-23T04:17:52+00:00"
         },
         {
             "name": "markup-carve/tempest-carve",
-            "version": "dev-main",
+            "version": "0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/markup-carve/tempest-carve.git",
-                "reference": "ec0a8d4c62ea8c888e2eaee991666f20765b0e58"
+                "reference": "23581b8a8f0a421930d2ac8769d55e7721a5c464"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/markup-carve/tempest-carve/zipball/ec0a8d4c62ea8c888e2eaee991666f20765b0e58",
-                "reference": "ec0a8d4c62ea8c888e2eaee991666f20765b0e58",
+                "url": "https://api.github.com/repos/markup-carve/tempest-carve/zipball/23581b8a8f0a421930d2ac8769d55e7721a5c464",
+                "reference": "23581b8a8f0a421930d2ac8769d55e7721a5c464",
                 "shasum": ""
             },
             "require": {
-                "markup-carve/carve-php": "dev-main as 0.1.999",
+                "markup-carve/carve-php": "^0.1.14",
                 "php": "^8.5",
                 "tempest/cache": "^3.19",
+                "tempest/console": "^3.19",
+                "tempest/mapper": "^3.19",
+                "tempest/validation": "^3.19",
                 "tempest/view": "^3.19"
             },
             "require-dev": {
+                "markup-carve/tempest-highlight-carve": "^0.1.2",
                 "php-collective/code-sniffer": "^0.6.8",
                 "phpstan/phpstan": "^2.2",
                 "phpunit/phpunit": "^12.5",
@@ -1563,9 +1567,10 @@
                 "tempest/framework": "^3.19"
             },
             "suggest": {
-                "phpunit/phpunit": "Required to use the optional CarveAssertions testing trait."
+                "markup-carve/tempest-highlight-carve": "Highlights Carve fences when the tempest_highlight extension is enabled.",
+                "phpunit/phpunit": "Required to use the optional CarveAssertions testing trait.",
+                "tempest/highlight": "Required by the tempest_highlight extension that highlights fenced code."
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -1603,7 +1608,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-09-15T21:46:37+00:00"
+            "time": "2026-10-23T12:57:29+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -6830,19 +6835,9 @@
             "time": "2025-12-08T11:19:18+00:00"
         }
     ],
-    "aliases": [
-        {
-            "package": "markup-carve/carve-php",
-            "version": "dev-main",
-            "alias": "0.1.999",
-            "alias_normalized": "0.1.999.0"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "markup-carve/carve-php": 20,
-        "markup-carve/tempest-carve": 20
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
