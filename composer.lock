@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "101510a516d0d41fa5b6cdfbf2688bf6",
+    "content-hash": "b8609f0022e6354c11e97652978d0c26",
     "packages": [
         {
             "name": "composer/semver",
@@ -1466,16 +1466,16 @@
         },
         {
             "name": "markup-carve/carve-php",
-            "version": "0.1.14",
+            "version": "0.1.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/markup-carve/carve-php.git",
-                "reference": "8f1822274f6ae89ba5728107ec6458a35ace5311"
+                "reference": "20d920713845b9310158d42fbe127e63a8f92509"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/markup-carve/carve-php/zipball/8f1822274f6ae89ba5728107ec6458a35ace5311",
-                "reference": "8f1822274f6ae89ba5728107ec6458a35ace5311",
+                "url": "https://api.github.com/repos/markup-carve/carve-php/zipball/20d920713845b9310158d42fbe127e63a8f92509",
+                "reference": "20d920713845b9310158d42fbe127e63a8f92509",
                 "shasum": ""
             },
             "require": {
@@ -1525,7 +1525,7 @@
             ],
             "support": {
                 "issues": "https://github.com/markup-carve/carve-php/issues",
-                "source": "https://github.com/markup-carve/carve-php/tree/0.1.14"
+                "source": "https://github.com/markup-carve/carve-php/tree/0.1.16"
             },
             "funding": [
                 {
@@ -1533,7 +1533,8 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-10-23T04:17:52+00:00"
+            "time": "2026-10-25T19:11:29+00:00",
+            "published-time": "2026-10-25T19:14:26+00:00"
         },
         {
             "name": "markup-carve/tempest-carve",
@@ -1608,7 +1609,8 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-10-23T12:57:29+00:00"
+            "time": "2026-10-23T12:57:29+00:00",
+            "published-time": "2026-10-23T13:05:15+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -2139,7 +2141,8 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-09-12T21:39:33+00:00"
+            "time": "2026-09-12T21:39:33+00:00",
+            "published-time": "2026-09-12T21:39:45+00:00"
         },
         {
             "name": "psr-discovery/discovery",
@@ -4908,12 +4911,12 @@
             "version": "v5.7.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/vlucas/phpdotenv.git",
+                "url": "https://github.com/phpdotenv/phpdotenv.git",
                 "reference": "301c07936b16d88628b126b01d082ba153cf4c40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/301c07936b16d88628b126b01d082ba153cf4c40",
+                "url": "https://api.github.com/repos/phpdotenv/phpdotenv/zipball/301c07936b16d88628b126b01d082ba153cf4c40",
                 "reference": "301c07936b16d88628b126b01d082ba153cf4c40",
                 "shasum": ""
             },
@@ -6846,5 +6849,5 @@
         "php": "^8.5"
     },
     "platform-dev": {},
-    "plugin-api-version": "2.9.0"
+    "plugin-api-version": "2.11.0"
 }

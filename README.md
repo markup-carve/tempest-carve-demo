@@ -46,7 +46,7 @@ by GitHub Actions.
 Configuration lives in `app/carve.config.php`; the complete interactive showcase
 is served from `/`. The include example uses `tempest-carve`'s first-class
 resolver API and an in-memory SQLite database so it also works during static deployment.
-The demo runs the tagged `tempest-carve` 0.1.2 and `carve-php` 0.1.14 releases.
+The demo runs the tagged `tempest-carve` 0.1.2 and `carve-php` 0.1.16 releases.
 
 ## Quality
 
