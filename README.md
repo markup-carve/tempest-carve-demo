@@ -38,7 +38,7 @@ by GitHub Actions.
 | Profiles | Full, article, comment, and minimal policies side by side |
 | Outputs | HTML, Markdown, plain text, and ANSI from one source |
 | Diagnostics | Parser warnings, profile violations, and bounded render losses |
-| Database-backed includes | A container-injected resolver backed by an in-memory SQLite repository, with relative nested snippets, heading shifts, dependency tracking, and revision-aware caching |
+| Database-backed includes | A container-injected resolver backed by an in-memory SQLite repository, with relative nested snippets, heading shifts, a CSV table include narrowed with `@rows` and `@cols`, dependency tracking, and revision-aware caching |
 | Extensions | Container-discovered heading numbering |
 | Application support | Tempest Cache and source-line annotations |
 | Security | Safe raw-content handling across output targets |

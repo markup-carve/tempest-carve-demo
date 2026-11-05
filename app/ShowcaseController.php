@@ -112,7 +112,16 @@ final readonly class ShowcaseController
         <script>alert('This is escaped, never executed')</script>
         ```
 
-        ## New in the 0.1.11 wave
+        ## Recent syntax
+
+        |= Feature |={>} Engines |={~} Status |
+        | Braced cell alignment | 3 | new |
+        | Continuation marker | 3 | stable |
+        ^ Alignment sits in braces glued to the cell marker
+
+        A comment line between two source lines
+        %% Erased before layout, so it never splits the paragraph.
+        keeps them in one paragraph.
 
         - A lone plus attaches the next block to this item
         +
@@ -138,7 +147,7 @@ final readonly class ShowcaseController
      */
     private function includes(): array
     {
-        $source = "# Composed handbook\n\n{{ /handbook/overview @shift:auto }}";
+        $source = "# Composed handbook\n\n{{ /handbook/overview @shift:auto }}\n\n{table}\n{{ /handbook/targets.csv @code:csv @rows:2-3 @cols:\"Target,Output\" }}";
         $result = $this->carve->renderIncluded(
             $source,
             new IncludeOptions(currentPath: 'db:handbook/root'),

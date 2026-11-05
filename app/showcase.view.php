@@ -84,7 +84,7 @@
         <div class="section-heading">
           <p class="eyebrow">04 · Database-backed includes</p>
           <h2>Compose documents from reusable sources <a class="section-copy-link" href="#includes" data-copy-section-link aria-label="Copy link to Compose documents from reusable sources">#</a></h2>
-          <p>A container-injected resolver backed by an in-memory SQLite repository loads Carve snippets from rows. The included row references a sibling row relatively, automatic heading shifts preserve the assembled outline, and content revisions invalidate cached output.</p>
+          <p>A container-injected resolver backed by an in-memory SQLite repository loads Carve snippets from rows. The included row references a sibling row relatively, automatic heading shifts preserve the assembled outline, a CSV row becomes a table with <code>@rows</code> and <code>@cols</code> picking records and columns, and content revisions invalidate cached output.</p>
         </div>
         <div class="output-grid">
           <article class="output-card"><span class="output-label">Parent document</span><div class="preformatted">{!! $includeSource !!}</div></article>
