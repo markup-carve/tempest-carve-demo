@@ -29,6 +29,11 @@ final class ContentSnippetRepository
             'body' => "# Nested database snippet\n\nThe resolver uses the including record as context, so relative includes work across rows.",
             'revision' => 7,
         ]);
+        $insert->execute([
+            'slug' => 'handbook/targets.csv',
+            'body' => "Target,Output,Since\nHTML,Safe markup,0.1.0\nANSI,Terminal colors,0.1.2\nMarkdown,Interchange,0.1.0\n",
+            'revision' => 2,
+        ]);
     }
 
     /** @return array{body: string, revision: int}|null */
