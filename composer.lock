@@ -1473,12 +1473,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/markup-carve/carve-php.git",
-                "reference": "78a2811d2fdcff8f25ebfb32f2721fbc77b15944"
+                "reference": "83531ad57ee13280615e81f1a8f26309cb3525b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/markup-carve/carve-php/zipball/78a2811d2fdcff8f25ebfb32f2721fbc77b15944",
-                "reference": "78a2811d2fdcff8f25ebfb32f2721fbc77b15944",
+                "url": "https://api.github.com/repos/markup-carve/carve-php/zipball/83531ad57ee13280615e81f1a8f26309cb3525b8",
+                "reference": "83531ad57ee13280615e81f1a8f26309cb3525b8",
                 "shasum": ""
             },
             "require": {
@@ -1588,7 +1588,7 @@
                     "url": "https://github.com/dereuromark"
                 }
             ],
-            "time": "2026-11-05T04:16:53+00:00"
+            "time": "2026-11-11T11:47:39+00:00"
         },
         {
             "name": "markup-carve/tempest-carve",
