@@ -9,7 +9,7 @@
         "php": "^8.5",
         "markup-carve/tempest-carve": "^0.1.2",
         "tempest/framework": "^3.0",
-        "markup-carve/carve-php": "dev-main as 0.1.17"
+        "markup-carve/carve-php": "^0.1.17"
     },
     "require-dev": {
         "phpunit/phpunit": "^12.5.8",
@@ -49,12 +49,6 @@
         "github:analyse": "vendor/bin/mago analyse",
         "github:test": "vendor/bin/phpunit"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/markup-carve/carve-php"
-        }
-    ],
     "license": "MIT",
     "minimum-stability": "dev",
     "prefer-stable": true,

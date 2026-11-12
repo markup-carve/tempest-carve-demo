@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6069d68424347907f2351bdf579db157",
+    "content-hash": "442b4accf099363535b3e2991321939b",
     "packages": [
         {
             "name": "composer/semver",
@@ -156,8 +156,7 @@
                 "issues": "https://github.com/dflydev/dflydev-dot-access-data/issues",
                 "source": "https://github.com/dflydev/dflydev-dot-access-data/tree/v3.0.3"
             },
-            "time": "2024-07-08T12:26:09+00:00",
-            "published-time": "2024-07-08T12:27:13+00:00"
+            "time": "2024-07-08T12:26:09+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -1128,8 +1127,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-10-31T13:35:37+00:00",
-            "published-time": "2026-10-31T13:35:57+00:00"
+            "time": "2026-10-31T13:35:37+00:00"
         },
         {
             "name": "league/config",
@@ -1211,8 +1209,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-12-11T20:36:23+00:00",
-            "published-time": "2022-12-11T20:36:45+00:00"
+            "time": "2022-12-11T20:36:23+00:00"
         },
         {
             "name": "league/flysystem",
@@ -1469,16 +1466,16 @@
         },
         {
             "name": "markup-carve/carve-php",
-            "version": "dev-main",
+            "version": "0.1.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/markup-carve/carve-php.git",
-                "reference": "83531ad57ee13280615e81f1a8f26309cb3525b8"
+                "reference": "fa017b5e5260180e45cf8cb2add16c9adaad74a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/markup-carve/carve-php/zipball/83531ad57ee13280615e81f1a8f26309cb3525b8",
-                "reference": "83531ad57ee13280615e81f1a8f26309cb3525b8",
+                "url": "https://api.github.com/repos/markup-carve/carve-php/zipball/fa017b5e5260180e45cf8cb2add16c9adaad74a3",
+                "reference": "fa017b5e5260180e45cf8cb2add16c9adaad74a3",
                 "shasum": ""
             },
             "require": {
@@ -1495,7 +1492,6 @@
                 "ext-dom": "Required for HTML import and HTML heading-ID conversion.",
                 "ext-intl": "Recommended for heading-ID transliteration: enables ICU romanization of non-Latin scripts (e.g. CJK, Arabic). Without it, a baked map covers Latin/Cyrillic/punctuation identically and other scripts fall back to the generated `section` id."
             },
-            "default-branch": true,
             "bin": [
                 "bin/carve"
             ],
@@ -1505,58 +1501,7 @@
                     "MarkupCarve\\Carve\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "MarkupCarve\\Carve\\Test\\": "tests/"
-                }
-            },
-            "scripts": {
-                "check": [
-                    "@cs-check",
-                    "@stan",
-                    "@test"
-                ],
-                "cs-check": [
-                    "phpcs --colors --parallel=16"
-                ],
-                "complexity-check": [
-                    "phpcs --standard=phpcs-complexity.xml --no-cache --parallel=16"
-                ],
-                "cs-fix": [
-                    "phpcbf --colors --parallel=16"
-                ],
-                "fuzz": [
-                    "php-fuzzer fuzz fuzz/target.php fuzz/corpus/"
-                ],
-                "fuzz-strict": [
-                    "php-fuzzer fuzz fuzz/target-strict.php fuzz/corpus/"
-                ],
-                "schema-map-check": [
-                    "@php scripts/check-schema-map.php"
-                ],
-                "stan": [
-                    "phpstan analyze"
-                ],
-                "test": [
-                    "@php -d pcov.enabled=0 vendor/bin/phpunit"
-                ],
-                "test-parallel": [
-                    "@php -d pcov.enabled=0 vendor/bin/paratest --passthru-php=\"-d pcov.enabled=0\""
-                ],
-                "test-all": [
-                    "@test",
-                    "@test-scaling"
-                ],
-                "test-coverage": [
-                    "@php vendor/bin/phpunit --coverage-clover coverage.xml"
-                ],
-                "test-coverage-parallel": [
-                    "@php scripts/coverage-shards.php"
-                ],
-                "test-scaling": [
-                    "@php -d pcov.enabled=0 vendor/bin/phpunit --group scaling"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1579,16 +1524,16 @@
                 "parser"
             ],
             "support": {
-                "source": "https://github.com/markup-carve/carve-php/tree/main",
-                "issues": "https://github.com/markup-carve/carve-php/issues"
+                "issues": "https://github.com/markup-carve/carve-php/issues",
+                "source": "https://github.com/markup-carve/carve-php/tree/0.1.17"
             },
             "funding": [
                 {
-                    "type": "github",
-                    "url": "https://github.com/dereuromark"
+                    "url": "https://github.com/dereuromark",
+                    "type": "github"
                 }
             ],
-            "time": "2026-11-11T11:47:39+00:00"
+            "time": "2026-11-12T09:37:21+00:00"
         },
         {
             "name": "markup-carve/tempest-carve",
@@ -1663,8 +1608,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-10-23T12:57:29+00:00",
-            "published-time": "2026-10-23T13:05:15+00:00"
+            "time": "2026-10-23T12:57:29+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1908,8 +1852,7 @@
                 "issues": "https://github.com/nette/schema/issues",
                 "source": "https://github.com/nette/schema/tree/v1.4.0"
             },
-            "time": "2026-10-22T02:12:50+00:00",
-            "published-time": "2026-10-22T02:14:45+00:00"
+            "time": "2026-10-22T02:12:50+00:00"
         },
         {
             "name": "nette/utils",
@@ -2000,8 +1943,7 @@
                 "issues": "https://github.com/nette/utils/issues",
                 "source": "https://github.com/nette/utils/tree/v4.1.6"
             },
-            "time": "2026-10-20T17:07:56+00:00",
-            "published-time": "2026-10-20T17:48:30+00:00"
+            "time": "2026-10-20T17:07:56+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -2197,8 +2139,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-09-12T21:39:33+00:00",
-            "published-time": "2026-09-12T21:39:45+00:00"
+            "time": "2026-09-12T21:39:33+00:00"
         },
         {
             "name": "psr-discovery/discovery",
@@ -2621,8 +2562,7 @@
                 "issues": "https://github.com/php-fig/event-dispatcher/issues",
                 "source": "https://github.com/php-fig/event-dispatcher/tree/1.0.0"
             },
-            "time": "2019-01-08T18:20:26+00:00",
-            "published-time": "2019-03-25T15:31:44+00:00"
+            "time": "2019-01-08T18:20:26+00:00"
         },
         {
             "name": "psr/http-client",
@@ -3186,8 +3126,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-09-16T14:15:10+00:00",
-            "published-time": "2026-11-04T11:25:34+00:00"
+            "time": "2026-09-16T14:15:10+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -3424,8 +3363,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-11-04T08:39:20+00:00",
-            "published-time": "2026-11-04T11:32:01+00:00"
+            "time": "2026-11-04T08:39:20+00:00"
         },
         {
             "name": "symfony/mailer",
@@ -3591,8 +3529,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-10-28T17:58:38+00:00",
-            "published-time": "2026-10-28T18:23:55+00:00"
+            "time": "2026-10-28T17:58:38+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -3675,8 +3612,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-04-10T16:19:22+00:00",
-            "published-time": "2026-04-26T14:44:50+00:00"
+            "time": "2026-04-10T16:19:22+00:00"
         },
         {
             "name": "symfony/polyfill-deepclone",
@@ -3850,8 +3786,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-09-23T14:40:04+00:00",
-            "published-time": "2026-09-30T10:23:39+00:00"
+            "time": "2026-09-23T14:40:04+00:00"
         },
         {
             "name": "symfony/polyfill-intl-normalizer",
@@ -3936,8 +3871,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-09-23T22:02:09+00:00",
-            "published-time": "2026-09-30T10:23:47+00:00"
+            "time": "2026-09-23T22:02:09+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -4022,8 +3956,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-10-28T09:35:49+00:00",
-            "published-time": "2026-10-28T10:07:45+00:00"
+            "time": "2026-10-28T09:35:49+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
@@ -4107,8 +4040,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-09-25T15:50:05+00:00",
-            "published-time": "2026-09-30T10:23:35+00:00"
+            "time": "2026-09-25T15:50:05+00:00"
         },
         {
             "name": "symfony/polyfill-uuid",
@@ -4667,8 +4599,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-11-04T08:39:20+00:00",
-            "published-time": "2026-11-04T11:31:03+00:00"
+            "time": "2026-11-04T08:39:20+00:00"
         },
         {
             "name": "tempest/framework",
@@ -6904,18 +6835,9 @@
             "time": "2025-12-08T11:19:18+00:00"
         }
     ],
-    "aliases": [
-        {
-            "package": "markup-carve/carve-php",
-            "version": "dev-main",
-            "alias": "0.1.17",
-            "alias_normalized": "0.1.17.0"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "markup-carve/carve-php": 20
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
@@ -6924,5 +6846,5 @@
         "php": "^8.5"
     },
     "platform-dev": {},
-    "plugin-api-version": "2.11.0"
+    "plugin-api-version": "2.9.0"
 }
