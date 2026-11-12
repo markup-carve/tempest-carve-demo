@@ -59,6 +59,20 @@ final class ShowcaseControllerTest extends IntegrationTestCase
     }
 
     #[Test]
+    public function index_shows_cell_spans_continuation_rows_and_a_tight_commented_list(): void
+    {
+        $this->http
+            ->get('/')
+            ->assertOk()
+            ->assertSee('<th scope="col" style="text-align: left;">Feature</th>')
+            ->assertSee('<td rowspan="2" style="text-align: center;">new</td>')
+            ->assertSee('<td colspan="2" style="text-align: left;">Column spans across two columns</td>')
+            ->assertSee('a cell note that continues on the next source line</td>')
+            ->assertSee('<li>A comment line between two items</li>')
+            ->assertNotSee('<td>^</td>');
+    }
+
+    #[Test]
     public function index_includes_a_csv_record_range_from_the_database(): void
     {
         $this->http

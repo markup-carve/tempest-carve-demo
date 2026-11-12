@@ -7,7 +7,7 @@
         "ext-pdo": "*",
         "ext-pdo_sqlite": "*",
         "php": "^8.5",
-        "markup-carve/tempest-carve": "^0.1.2",
+        "markup-carve/tempest-carve": "^0.1.3",
         "tempest/framework": "^3.0",
         "markup-carve/carve-php": "^0.1.17"
     },
