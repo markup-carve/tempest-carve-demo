@@ -114,10 +114,14 @@ final readonly class ShowcaseController
 
         ## Recent syntax
 
-        |= Feature |={>} Engines |={~} Status |
+        |={<} Feature |={>} Engines |={~} Status |
         | Braced cell alignment | 3 | new |
+        | Row spans | 3 | ^ |
+        | Column spans across two columns | < | new |
+        | Continuation rows | 3 | a cell note that |
+        + | | continues on the next source line |
         | Continuation marker | 3 | stable |
-        ^ Alignment sits in braces glued to the cell marker
+        ^ Braced alignment, a rowspan, a colspan and a continuation row
 
         A comment line between two source lines
         %% Erased before layout, so it never splits the paragraph.
@@ -127,6 +131,12 @@ final readonly class ShowcaseController
         +
         > This quote belongs to the item above, with no indentation.
         - The list stays tight
+
+        A comment line inside a list keeps it tight, too:
+
+        - A comment line between two items
+        %% Erased before layout, so the list stays tight.
+        - Both items render without paragraphs
 
         {table}
         ```csv
