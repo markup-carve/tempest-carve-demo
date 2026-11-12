@@ -49,12 +49,6 @@
         "github:analyse": "vendor/bin/mago analyse",
         "github:test": "vendor/bin/phpunit"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/markup-carve/carve-php"
-        }
-    ],
     "license": "MIT",
     "minimum-stability": "dev",
     "prefer-stable": true,
