@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+/* Tailwind v4 preflight resets buttons to cursor: default. */
+@layer base {
+    button:not(:disabled), [role="button"]:not([aria-disabled="true"]), summary, label[for], select { cursor: pointer; }
+    button:disabled, [aria-disabled="true"] { cursor: not-allowed; }
+}
+
 :root {
   color: #17231f;
   background: #f1eee6;
@@ -62,6 +68,14 @@ main { max-width: 1240px; margin: auto; padding: 0 max(5vw, 1.5rem); }
 .carve mark { background: #d8ff65; padding: 0 .15em; }
 .carve blockquote { margin: 1.8rem 0; padding: .7rem 1.3rem; border-left: 4px solid #6f947f; color: #51635c; background: #edf1eb; }
 .carve pre { background: #102d25; color: #eaf2ee; border-radius: 10px; padding: 1.2rem; overflow: auto; }
+.carve code { color: #294e42; background: #e6ebe4; border-radius: 5px; padding: .1rem .35rem; font-size: .88em; }
+.carve pre code { color: inherit; background: none; padding: 0; font-size: inherit; }
+.carve table { width: 100%; margin: 1.6rem 0; border-collapse: collapse; font-size: .92em; line-height: 1.5; font-variant-numeric: tabular-nums; }
+.carve caption { caption-side: bottom; padding-top: .7rem; color: #5c6863; font-size: .85em; font-style: italic; text-align: left; }
+.carve th, .carve td { padding: .6rem .85rem; border: 1px solid #d8d4c9; vertical-align: top; text-align: left; }
+.carve thead th { background: #132f27; color: #f8f4e8; border-color: #132f27; font-weight: 700; }
+.carve td[rowspan] { vertical-align: middle; }
+.carve tfoot td, .carve tfoot th { font-weight: 700; border-top: 2px solid #132f27; }
 .carve .section-number { color: #6f947f; font-size: .65em; margin-right: .4em; font-variant-numeric: tabular-nums; }
 
 .profile-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
