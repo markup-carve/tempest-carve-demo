@@ -1,0 +1,6 @@
+= Composed handbook
+
+{{ /handbook/overview @shift:auto }}
+
+{table}
+{{ /handbook/targets.csv @rows:2-3 @cols:"Target,Output" @code:csv }}

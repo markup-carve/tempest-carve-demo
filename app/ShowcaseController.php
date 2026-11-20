@@ -26,7 +26,7 @@ final readonly class ShowcaseController
     public function __invoke(): View
     {
         $document = $this->document();
-        $formatsSource = "# Portable output\n\n/One source/ can serve *many targets*.";
+        $formatsSource = Content::read('formats.crv');
         $includes = $this->includes();
 
         return view(
@@ -39,7 +39,7 @@ final readonly class ShowcaseController
             plainOutput: $this->escaped($this->carve->renderPlainText($formatsSource)),
             ansiOutput: $this->escaped(str_replace("\033", '\\e', $this->carve->renderAnsi($formatsSource))),
             report: $this->diagnostics(),
-            lossReport: CarveRenderer::safe()->renderWithReport("```=latex\n\\textbf{x}\n```"),
+            lossReport: CarveRenderer::safe()->renderWithReport(Content::read('loss.crv')),
             includeSource: $this->escaped($includes['source']),
             includeHtml: $includes['html'],
             includeDependencies: $includes['dependencies'],
@@ -76,75 +76,12 @@ final readonly class ShowcaseController
     {
         $renderer = CarveRenderer::safe(new CarveConfig(profile: CarveProfile::Comment));
 
-        return $renderer->renderWithReport(<<<'CARVE'
-        # A heading comments cannot publish
-
-        This reference is [missing][nowhere].
-
-        ```=html
-        <script>alert('comments cannot publish raw HTML')</script>
-        ```
-        CARVE);
+        return $renderer->renderWithReport(Content::read('diagnostics.crv'));
     }
 
     private function document(): string
     {
-        return <<<'CARVE'
-        # Carve meets Tempest
-
-        /Readable source/ becomes *safe HTML*, with _underlines_, =highlights=,
-        smart typography -- and links to [Tempest](https://tempestphp.com/).
-
-        ## Built for application content
-
-        - Safe-by-default raw HTML handling
-        - Named publishing profiles
-        - Container-resolved extensions
-        - Source-line annotations for editor synchronization
-
-        > The configured renderer numbers headings and caches this output.
-
-        ```php
-        $html = $carve->render($source);
-        ```
-
-        ```=html
-        <script>alert('This is escaped, never executed')</script>
-        ```
-
-        ## Recent syntax
-
-        |={<} Feature |={>} Engines |={~} Status |
-        | Braced cell alignment | 3 | new |
-        | Row spans | 3 | ^ |
-        | Column spans across two columns | < | new |
-        | Continuation rows | 3 | a cell note that |
-        + | | continues on the next source line |
-        | Continuation marker | 3 | stable |
-        ^ Braced alignment, a rowspan, a colspan and a continuation row
-
-        A comment line between two source lines
-        %% Erased before layout, so it never splits the paragraph.
-        keeps them in one paragraph.
-
-        - A lone plus attaches the next block to this item
-        +
-        > This quote belongs to the item above, with no indentation.
-        - The list stays tight
-
-        A comment line inside a list keeps it tight, too:
-
-        - A comment line between two items
-        %% Erased before layout, so the list stays tight.
-        - Both items render without paragraphs
-
-        {table}
-        ```csv
-        Target,Output
-        HTML,Safe markup
-        "Plain text, ANSI",Terminals and mail
-        ```
-        CARVE;
+        return Content::read('showcase.crv');
     }
 
     private function escaped(string $value): string
@@ -157,7 +94,7 @@ final readonly class ShowcaseController
      */
     private function includes(): array
     {
-        $source = "# Composed handbook\n\n{{ /handbook/overview @shift:auto }}\n\n{table}\n{{ /handbook/targets.csv @code:csv @rows:2-3 @cols:\"Target,Output\" }}";
+        $source = Content::read('includes.crv');
         $result = $this->carve->renderIncluded(
             $source,
             new IncludeOptions(currentPath: 'db:handbook/root'),

@@ -4,28 +4,28 @@ declare(strict_types=1);
 
 namespace App;
 
-use MarkupCarve\Carve\Transform\IncludeContext;
-use MarkupCarve\Carve\Transform\IncludeResolverInterface;
-use MarkupCarve\Carve\Transform\ResolvedInclude;
+use MarkupCarve\Carve\Include\IncludeResolver;
 use MarkupCarve\Tempest\IncludeCacheKeyProvider;
 
-final readonly class DatabaseIncludeResolver implements IncludeResolverInterface, IncludeCacheKeyProvider
+final readonly class DatabaseIncludeResolver implements IncludeResolver, IncludeCacheKeyProvider
 {
     public function __construct(
         private ContentSnippetRepository $snippets,
     ) {}
 
-    public function resolve(string $path, IncludeContext $context): ?ResolvedInclude
+    public function resolve(array $request): array
     {
-        $slug = $this->resolveSlug($path, $context->getIncludingPath());
+        $slug = $this->resolveSlug($request['path'], $request['from'] ?? null);
         if ($slug === null) {
-            return null;
+            return ['error' => 'outside_root'];
         }
         $snippet = $this->snippets->find($slug);
 
-        return $snippet === null
-            ? null
-            : new ResolvedInclude($snippet['body'], 'db:' . $slug);
+        return (
+            $snippet === null
+                ? ['error' => 'not_found']
+                : ['text' => $snippet['body'], 'id' => 'db:' . $slug]
+        );
     }
 
     public function includeCacheKey(array $dependencies): string

@@ -47,7 +47,9 @@ jobs:
       - run: php tempest static:generate --crawl
 
       - name: Make asset paths project-relative
-        run: sed -i 's|"/build/|"./build/|g' public/index.html
+        run: |
+          sed -i -E 's#"/(build|favicon)/#"./\1/#g' public/index.html
+          sed -i -E 's#"/(build|favicon)/#"../\1/#g' public/*/index.html
 
       - uses: actions/configure-pages@v6
         if: github.event_name != 'pull_request'
