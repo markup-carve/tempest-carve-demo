@@ -1,0 +1,54 @@
+= Carve meets Tempest
+
+/Readable source/ becomes *safe HTML*, with {_underlines_}, {=highlights=},
+smart typography -- and links to [Tempest](https://tempestphp.com/).
+
+== Built for application content
+
+- Safe-by-default raw HTML handling
+- Named publishing profiles
+- Container-resolved extensions
+- Source-line annotations for editor synchronization
+
+> The configured renderer numbers headings and caches this output.
+
+```php
+$html = $carve->render($source);
+```
+
+```=html
+<script>alert('This is escaped, never executed')</script>
+```
+
+== Carve 0.2 syntax
+
+|={<} Feature |={>} Engines |={~} Status |
+| Braced cell alignment | 3 | new |
+| Row spans | 3 | ^ |
+| Column spans across two columns | < | new |
+| Continuation rows | 3 | a cell note that |
++ | | continues on the next source line |
+| Continuation marker | 3 | stable |
+^ Braced alignment, a rowspan, a colspan and a continuation row
+
+A comment line between two source lines
+%% Erased before layout, so it never splits the paragraph.
+keeps them in one paragraph.
+
+- An indented block after a blank line joins this item
+
+  > This quote belongs to the item above.
+- The next item continues the same list
+
+A comment line inside a list keeps it tight, too:
+
+- A comment line between two items
+  %% Erased before layout, so the list stays tight.
+- Both items render without paragraphs
+
+{table}
+```csv
+Target,Output
+HTML,Safe markup
+"Plain text, ANSI",Terminals and mail
+```
