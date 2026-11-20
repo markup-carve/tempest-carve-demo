@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e7d140377cfa4c6f309491fda701a6e0",
+    "content-hash": "1b4af5839d546d6a6f250033dc39714f",
     "packages": [
         {
             "name": "composer/semver",
@@ -1466,24 +1466,25 @@
         },
         {
             "name": "markup-carve/carve-php",
-            "version": "0.1.17",
+            "version": "dev-next2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/markup-carve/carve-php.git",
-                "reference": "fa017b5e5260180e45cf8cb2add16c9adaad74a3"
+                "reference": "1ce70376fbcb06d4ac40493efd131becaf957f29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/markup-carve/carve-php/zipball/fa017b5e5260180e45cf8cb2add16c9adaad74a3",
-                "reference": "fa017b5e5260180e45cf8cb2add16c9adaad74a3",
+                "url": "https://api.github.com/repos/markup-carve/carve-php/zipball/1ce70376fbcb06d4ac40493efd131becaf957f29",
+                "reference": "1ce70376fbcb06d4ac40493efd131becaf957f29",
                 "shasum": ""
             },
             "require": {
-                "php": "^8.2"
+                "league/commonmark": "^2.9.2",
+                "php": "^8.2",
+                "php-collective/djot": "^0.1.35",
+                "symfony/polyfill-intl-normalizer": "^1.27"
             },
             "require-dev": {
-                "brianium/paratest": "^7.8",
-                "nikic/php-fuzzer": "^0.0.11",
                 "php-collective/code-sniffer": "^0.6.8",
                 "phpstan/phpstan": "^2.1.32",
                 "phpunit/phpunit": "^11.0 || ^12.0 || ^13.0"
@@ -1525,7 +1526,7 @@
             ],
             "support": {
                 "issues": "https://github.com/markup-carve/carve-php/issues",
-                "source": "https://github.com/markup-carve/carve-php/tree/0.1.17"
+                "source": "https://github.com/markup-carve/carve-php/tree/next2"
             },
             "funding": [
                 {
@@ -1533,24 +1534,24 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-11-12T09:37:21+00:00"
+            "time": "2026-11-20T03:56:27+00:00"
         },
         {
             "name": "markup-carve/tempest-carve",
-            "version": "0.1.3",
+            "version": "dev-next2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/markup-carve/tempest-carve.git",
-                "reference": "59ae5688a8e9d6aa77ce1ec4e6993f46cbb3f68d"
+                "reference": "70e13730f173197c68279cfbaeca1f55bf4e8e85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/markup-carve/tempest-carve/zipball/59ae5688a8e9d6aa77ce1ec4e6993f46cbb3f68d",
-                "reference": "59ae5688a8e9d6aa77ce1ec4e6993f46cbb3f68d",
+                "url": "https://api.github.com/repos/markup-carve/tempest-carve/zipball/70e13730f173197c68279cfbaeca1f55bf4e8e85",
+                "reference": "70e13730f173197c68279cfbaeca1f55bf4e8e85",
                 "shasum": ""
             },
             "require": {
-                "markup-carve/carve-php": "^0.1.17",
+                "markup-carve/carve-php": "dev-next2#1ce70376fbcb06d4ac40493efd131becaf957f29",
                 "php": "^8.5",
                 "tempest/cache": "^3.19",
                 "tempest/console": "^3.19",
@@ -1608,7 +1609,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-11-12T11:09:09+00:00"
+            "time": "2026-11-20T03:35:54+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -2000,6 +2001,72 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v5.9.0"
             },
             "time": "2026-09-13T18:51:52+00:00"
+        },
+        {
+            "name": "php-collective/djot",
+            "version": "0.1.35",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-collective/djot-php.git",
+                "reference": "709058dd11572cd861aab35919244e12d84431a5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-collective/djot-php/zipball/709058dd11572cd861aab35919244e12d84431a5",
+                "reference": "709058dd11572cd861aab35919244e12d84431a5",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "nikic/php-fuzzer": "^0.0.11",
+                "php-collective/code-sniffer": "^0.6.8",
+                "phpstan/phpstan": "^2.1.32",
+                "phpunit/phpunit": "^11.0 || ^12.0 || ^13.0"
+            },
+            "suggest": {
+                "ext-intl": "Recommended for heading-ID transliteration: enables ICU romanization of non-Latin scripts (e.g. CJK, Arabic). Without it, a baked map covers Latin/Cyrillic/Greek/punctuation identically and other scripts fall back to generated `s-N` ids."
+            },
+            "bin": [
+                "bin/djot",
+                "bin/djot-watch"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Djot\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP Collective",
+                    "homepage": "https://github.com/php-collective"
+                }
+            ],
+            "description": "A PHP parser for Djot, a modern light markup language",
+            "homepage": "https://php-collective.github.io/djot-php/",
+            "keywords": [
+                "djot",
+                "markdown",
+                "markup",
+                "parser"
+            ],
+            "support": {
+                "issues": "https://github.com/php-collective/djot-php/issues",
+                "source": "https://github.com/php-collective/djot-php/tree/0.1.35"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/dereuromark",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-11-11T11:34:56+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -6831,7 +6898,10 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {},
+    "stability-flags": {
+        "markup-carve/carve-php": 20,
+        "markup-carve/tempest-carve": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
