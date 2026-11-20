@@ -1,25 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A complete Tempest Carve integration showcase">
-  <title>Tempest Carve showcase</title>
-  <x-vite-tags />
-</head>
-<body>
-  <div class="page-shell">
-    <header class="hero">
-      <nav class="nav" aria-label="Primary navigation">
-        <a class="brand" href="./">Tempest <span>×</span> Carve</a>
-        <div class="nav-links">
-          <a href="#profiles">Profiles</a>
-          <a href="#outputs">Outputs</a>
-          <a href="#includes">Includes</a>
-          <a href="#diagnostics">Diagnostics</a>
-        </div>
-      </nav>
-
+<x-demo-page title="Tempest Carve showcase" active="showcase">
+  <x-slot name="hero">
       <div class="hero-grid">
         <div>
           <p class="eyebrow">Safe document rendering for Tempest</p>
@@ -34,9 +14,8 @@
           <div class="preformatted">{!! $componentSourceEscaped !!}</div>
         </div>
       </div>
-    </header>
+  </x-slot>
 
-    <main>
       <section class="section component-demo" id="component">
         <div class="section-heading">
           <p class="eyebrow">01 · View component</p>
@@ -114,7 +93,7 @@
             <h3>Profile decisions</h3>
             <div class="report-row" :foreach="$report->profileViolations as $violation">
               <span class="diagnostic-code">{{ $violation['nodeType'] }}</span>
-              <span>{{ $violation['reasonDescription'] ?? $violation['reason'] }}</span>
+              <span>{{ $violation['message'] }}</span>
             </div>
           </article>
           <article class="report-list">
@@ -132,9 +111,16 @@
         <article><span>07</span><h3>Content cache</h3><p>The configured renderer stores deterministic output by source, format, profile, options, extensions, and engine version.</p><p class="feature-note">Enabled through Tempest Cache with a one-hour expiration.</p></article>
         <article><span>∞</span><h3>Safe by default</h3><p>Raw HTML is escaped in HTML and Markdown, omitted from plain text, and represented only as text in ANSI.</p></article>
       </section>
-    </main>
-
-    <footer><span>Tempest <a href="https://markup-carve.github.io/carve/">Carve</a> demo</span><span>Powered by <a href="https://github.com/markup-carve/tempest-carve"><code>markup-carve/tempest-carve</code></a></span></footer>
-  </div>
-</body>
-</html>
+      <section class="section feature-links" id="more">
+        <div class="section-heading">
+          <p class="eyebrow">08 · Everything else</p>
+          <h2>The rest of the adapter <a class="section-copy-link" href="#more" data-copy-section-link aria-label="Copy link to The rest of the adapter">#</a></h2>
+          <p>Every remaining tempest-carve feature has a page of its own.</p>
+        </div>
+        <div class="link-grid">
+          <a class="link-card" href="extensions/"><strong>Extensions &amp; options</strong><span>Named and container-resolved extensions, rendering options, named renderers and a host writer.</span></a>
+          <a class="link-card" href="authoring/"><strong>Authoring tools</strong><span>Lint, formatting, HTML and Markdown import, validation, model properties and include limits.</span></a>
+          <a class="link-card" href="console/"><strong>Console</strong><span>The <code>carve:render</code>, <code>carve:lint</code>, <code>carve:fmt</code> and <code>carve:convert</code> commands.</span></a>
+        </div>
+      </section>
+</x-demo-page>
