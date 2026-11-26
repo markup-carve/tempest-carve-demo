@@ -10,6 +10,13 @@ use RuntimeException;
 
 final class ContentSnippetRepository
 {
+    /** @var array<string, array{string, int}> */
+    private const array SNIPPETS = [
+        'handbook/overview' => ['handbook/overview.crv', 3],
+        'handbook/details' => ['handbook/details.crv', 7],
+        'handbook/targets.csv' => ['handbook/targets.csv', 2],
+    ];
+
     private PDO $database;
 
     public function __construct()
@@ -19,21 +26,9 @@ final class ContentSnippetRepository
         $this->database->exec('CREATE TABLE content_snippets (slug TEXT PRIMARY KEY, body TEXT NOT NULL, revision INTEGER NOT NULL)');
 
         $insert = $this->prepare('INSERT INTO content_snippets (slug, body, revision) VALUES (:slug, :body, :revision)');
-        $insert->execute([
-            'slug' => 'handbook/overview',
-            'body' => "# Database chapter\n\nThis Carve source was loaded from an in-memory SQLite row.\n\n{{ details @shift:auto }}",
-            'revision' => 3,
-        ]);
-        $insert->execute([
-            'slug' => 'handbook/details',
-            'body' => "# Nested database snippet\n\nThe resolver uses the including record as context, so relative includes work across rows.",
-            'revision' => 7,
-        ]);
-        $insert->execute([
-            'slug' => 'handbook/targets.csv',
-            'body' => "Target,Output,Since\nHTML,Safe markup,0.1.0\nANSI,Terminal colors,0.1.2\nMarkdown,Interchange,0.1.0\n",
-            'revision' => 2,
-        ]);
+        foreach (self::SNIPPETS as $slug => [$file, $revision]) {
+            $insert->execute(['slug' => $slug, 'body' => Content::read('snippets/' . $file), 'revision' => $revision]);
+        }
     }
 
     /** @return array{body: string, revision: int}|null */

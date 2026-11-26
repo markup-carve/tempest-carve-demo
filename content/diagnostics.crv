@@ -1,0 +1,9 @@
+= A heading comments cannot publish
+
+This reference is [missing][nowhere].
+
+{{ /signatures/team }}
+
+```=html
+<script>alert('comments cannot publish raw HTML')</script>
+```

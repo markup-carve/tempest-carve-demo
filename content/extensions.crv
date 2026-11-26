@@ -1,0 +1,45 @@
+= Extensions in one document
+
+== Tabs
+
+:::: tabs
+::: tab "Controller"
+Inject `CarveRenderer` and call `render()`.
+:::
+
+::: tab "View"
+Pass the source to `<x-carve :content="$source" />`.
+:::
+::::
+
+== Diagrams
+
+```mermaid
+graph LR; Source-->Renderer-->HTML
+```
+
+```plantuml
+Author -> Tempest : publish
+```
+
+```graphviz
+digraph { carve -> html }
+```
+
+== Wiki links
+
+Read :wiki[Markup language] or :wiki[Lightweight markup language|the lightweight family].
+
+== Highlighted code
+
+```php
+$html = $carve->named('comments')->render($source);
+```
+
+== Disclosures
+
+::: details "Why a container-resolved extension?"
+`App\Carve\DisclosureExtensions` is named by its class in `extensions`, so Tempest builds it.
+:::
+
+The ending is a :spoiler[safe render], revealed in static mode.

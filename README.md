@@ -17,6 +17,8 @@ A runnable Tempest application showcasing every feature of
 git clone https://github.com/markup-carve/tempest-carve-demo.git
 cd tempest-carve-demo
 composer install
+cp .env.example .env
+php tempest key:generate
 npm ci
 npm run build
 php tempest serve
@@ -32,21 +34,24 @@ by GitHub Actions.
 
 ## Features
 
-| Area | Demonstrates |
+| Page | Demonstrates |
 |---|---|
-| View integration | Rendering through the native `<x-carve>` component |
-| Profiles | Full, article, comment, and minimal policies side by side |
-| Outputs | HTML, Markdown, plain text, and ANSI from one source |
-| Diagnostics | Parser warnings, profile violations, and bounded render losses |
-| Database-backed includes | A container-injected resolver backed by an in-memory SQLite repository, with relative nested snippets, heading shifts, a CSV table include narrowed with `@rows` and `@cols`, dependency tracking, and revision-aware caching |
-| Extensions | Container-discovered heading numbering |
-| Application support | Tempest Cache and source-line annotations |
-| Security | Safe raw-content handling across output targets |
+| `/` Showcase | The `<x-carve>` component; the four profiles side by side; HTML, Markdown, plain text and ANSI from one source; `renderWithReport()` warnings, profile violations and bounded losses; database-backed includes through a container-injected resolver (relative nested rows, `@shift:auto`, a CSV include narrowed with `@rows` and `@cols`, dependency tracking, revision-aware caching); source lines; Tempest Cache |
+| `/extensions` | Extensions given as an engine definition (`Navigation::headingNumbers()`), a container-resolved class (`App\Carve\DisclosureExtensions`), and the adapter names `tabs`, `mermaid`, `plantuml`, `fenced_render`, `wikilinks` and `tempest_highlight`; a `WikiLinkUrlTemplate` URL generator; `smartTypography`, `sourceLines`, `sections`, `mode`, `rawHtml`, `urlPolicy` and every `headingIds` value before and after; a per-call profile; `namedRenderers`; a host `text` writer in `writers` |
+| `/authoring` | `lint()` and `lintIncluded()`; `format()` with and without `alignTables`; `fromHtml()` and `fromMarkdown()`; the `ValidCarve` rule; a `CarveContent` model property; `strictLosses`; `IncludeOptions` depth, byte and warning limits with `suppressedWarnings` |
+| `/console` | Live runs of `carve:render`, `carve:lint`, `carve:fmt` and `carve:convert` |
 
-Configuration lives in `app/carve.config.php`; the complete interactive showcase
-is served from `/`. The include example uses `tempest-carve`'s first-class
-resolver API and an in-memory SQLite database so it also works during static deployment.
-The demo runs the tagged `tempest-carve` 0.1.2 and `carve-php` 0.1.16 releases.
+The tests cover each page, run the console commands, and use the
+`CarveAssertions` PHPUnit trait.
+
+Configuration lives in `app/carve.config.php`. The Carve sources are files in
+`content/`; `content/snippets/` seeds the in-memory SQLite database used by
+the include resolver, so the include example also works during static
+deployment. `content/samples/` holds deliberately non-canonical input for the
+lint, format and import demos.
+
+The `next2` branch runs Carve 0.2: `tempest-carve` from its `next2` branch and
+`carve-php` pinned to a `next2` commit.
 
 ## Quality
 

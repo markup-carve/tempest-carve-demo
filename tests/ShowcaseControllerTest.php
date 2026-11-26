@@ -32,7 +32,7 @@ final class ShowcaseControllerTest extends IntegrationTestCase
             ->assertSee('https://github.com/markup-carve/tempest-carve')
             ->assertSee('data-source-line')
             ->assertSee('# Portable output')
-            ->assertSee('L3:C19')
+            ->assertSee('L5:C1')
             ->assertNotSee('{{ $');
     }
 
@@ -54,7 +54,8 @@ final class ShowcaseControllerTest extends IntegrationTestCase
             ->assertOk()
             ->assertSee('<th scope="col" style="text-align: right;">Engines</th>')
             ->assertSee('<td style="text-align: center;">new</td>')
-            ->assertSee('A comment line between two source lines keeps them in one paragraph.')
+            ->assertSee("A comment line between two source lines\nkeeps them in one paragraph.</p>")
+            ->assertNotSee('<p data-source-line="35">%%')
             ->assertNotSee('<td>={');
     }
 

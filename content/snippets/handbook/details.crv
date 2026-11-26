@@ -1,0 +1,3 @@
+= Nested database snippet
+
+The resolver uses the including record as context, so relative includes work across rows.

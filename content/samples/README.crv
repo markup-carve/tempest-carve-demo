@@ -1,0 +1,3 @@
+= Samples
+
+The files in this directory are input for the lint, format and import demos. They are non-canonical or 0.1 on purpose, so `carve lint` and `carve fmt --check` are run on the rest of `content/` only.
