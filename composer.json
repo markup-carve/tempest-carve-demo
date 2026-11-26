@@ -7,9 +7,9 @@
         "ext-pdo": "*",
         "ext-pdo_sqlite": "*",
         "php": "^8.5",
-        "markup-carve/tempest-carve": "dev-next2",
+        "markup-carve/tempest-carve": "dev-main",
         "tempest/framework": "^3.0",
-        "markup-carve/carve-php": "dev-next2#6ceebc52181efc1f5dfe6f5e7964b75c43f13a90"
+        "markup-carve/carve-php": "dev-main#6ceebc52181efc1f5dfe6f5e7964b75c43f13a90"
     },
     "require-dev": {
         "phpunit/phpunit": "^12.5.8",

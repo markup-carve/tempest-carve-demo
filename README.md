@@ -50,8 +50,9 @@ the include resolver, so the include example also works during static
 deployment. `content/samples/` holds deliberately non-canonical input for the
 lint, format and import demos.
 
-The `next2` branch runs Carve 0.2: `tempest-carve` from its `next2` branch and
-`carve-php` pinned to a `next2` commit.
+The `main` branch runs Carve 0.2: `tempest-carve` from its `main` branch and
+`carve-php` pinned to a `main` commit. The `0.1` branch keeps the Carve 0.1
+demo.
 
 ## Quality
 
