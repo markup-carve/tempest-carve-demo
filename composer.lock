@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f0d614b59725f1ef3304134ce96d47a0",
+    "content-hash": "1823212649713da37ab55a06ea0cc41f",
     "packages": [
         {
             "name": "composer/semver",
@@ -1469,7 +1469,7 @@
         },
         {
             "name": "markup-carve/carve-php",
-            "version": "dev-next2",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/markup-carve/carve-php.git",
@@ -1482,20 +1482,23 @@
                 "shasum": ""
             },
             "require": {
-                "league/commonmark": "^2.9.2",
                 "php": "^8.2",
-                "php-collective/djot": "^0.1.35",
                 "symfony/polyfill-intl-normalizer": "^1.27"
             },
             "require-dev": {
+                "league/commonmark": "^2.9.2",
                 "php-collective/code-sniffer": "^0.6.8",
+                "php-collective/djot": "^0.1.35",
                 "phpstan/phpstan": "^2.1.32",
                 "phpunit/phpunit": "^11.0 || ^12.0 || ^13.0"
             },
             "suggest": {
                 "ext-dom": "Required for HTML import and HTML heading-ID conversion.",
-                "ext-intl": "Recommended for heading-ID transliteration: enables ICU romanization of non-Latin scripts (e.g. CJK, Arabic). Without it, a baked map covers Latin/Cyrillic/punctuation identically and other scripts fall back to the generated `section` id."
+                "ext-intl": "Recommended for heading-ID transliteration: enables ICU romanization of non-Latin scripts (e.g. CJK, Arabic). Without it, a baked map covers Latin/Cyrillic/punctuation identically and other scripts fall back to the generated `section` id.",
+                "league/commonmark": "Required for Markdown and GFM import (^2.9.2).",
+                "php-collective/djot": "Required for Djot import (^0.1.35)."
             },
+            "default-branch": true,
             "bin": [
                 "bin/carve"
             ],
@@ -1529,7 +1532,7 @@
             ],
             "support": {
                 "issues": "https://github.com/markup-carve/carve-php/issues",
-                "source": "https://github.com/markup-carve/carve-php/tree/next2"
+                "source": "https://github.com/markup-carve/carve-php/tree/main"
             },
             "funding": [
                 {
@@ -1537,25 +1540,26 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-11-20T10:04:01+00:00",
-            "published-time": "2026-11-20T10:04:06+00:00"
+            "time": "2026-11-26T22:53:17+00:00",
+            "published-time": "2026-11-26T22:53:23+00:00"
         },
         {
             "name": "markup-carve/tempest-carve",
-            "version": "dev-next2",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/markup-carve/tempest-carve.git",
-                "reference": "3358f0fc893cc7a03363825818278f4ef625840d"
+                "reference": "26b5214a89080469a3026735ab9502a885ad6ee9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/markup-carve/tempest-carve/zipball/3358f0fc893cc7a03363825818278f4ef625840d",
-                "reference": "3358f0fc893cc7a03363825818278f4ef625840d",
+                "url": "https://api.github.com/repos/markup-carve/tempest-carve/zipball/26b5214a89080469a3026735ab9502a885ad6ee9",
+                "reference": "26b5214a89080469a3026735ab9502a885ad6ee9",
                 "shasum": ""
             },
             "require": {
-                "markup-carve/carve-php": "dev-next2#6ceebc52181efc1f5dfe6f5e7964b75c43f13a90",
+                "league/commonmark": "^2.9.2",
+                "markup-carve/carve-php": "dev-main#6ceebc52181efc1f5dfe6f5e7964b75c43f13a90",
                 "php": "^8.5",
                 "tempest/cache": "^3.19",
                 "tempest/console": "^3.19",
@@ -1564,7 +1568,7 @@
                 "tempest/view": "^3.19"
             },
             "require-dev": {
-                "markup-carve/tempest-highlight-carve": "dev-next2#12d47e5e6661ecd6e00205687b4984908c6b2c18",
+                "markup-carve/tempest-highlight-carve": "dev-main#12d47e5e6661ecd6e00205687b4984908c6b2c18",
                 "php-collective/code-sniffer": "^0.6.8",
                 "phpstan/phpstan": "^2.2",
                 "phpunit/phpunit": "^12.5",
@@ -1576,6 +1580,7 @@
                 "phpunit/phpunit": "Required to use the optional CarveAssertions testing trait.",
                 "tempest/highlight": "Required by the tempest_highlight extension that highlights fenced code."
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -1613,8 +1618,8 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-11-20T10:51:55+00:00",
-            "published-time": "2026-11-20T10:52:00+00:00"
+            "time": "2026-11-26T21:50:28+00:00",
+            "published-time": "2026-11-26T21:50:33+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -2008,73 +2013,6 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v5.9.0"
             },
             "time": "2026-09-13T18:51:52+00:00"
-        },
-        {
-            "name": "php-collective/djot",
-            "version": "0.1.35",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-collective/djot-php.git",
-                "reference": "709058dd11572cd861aab35919244e12d84431a5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-collective/djot-php/zipball/709058dd11572cd861aab35919244e12d84431a5",
-                "reference": "709058dd11572cd861aab35919244e12d84431a5",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8.2"
-            },
-            "require-dev": {
-                "nikic/php-fuzzer": "^0.0.11",
-                "php-collective/code-sniffer": "^0.6.8",
-                "phpstan/phpstan": "^2.1.32",
-                "phpunit/phpunit": "^11.0 || ^12.0 || ^13.0"
-            },
-            "suggest": {
-                "ext-intl": "Recommended for heading-ID transliteration: enables ICU romanization of non-Latin scripts (e.g. CJK, Arabic). Without it, a baked map covers Latin/Cyrillic/Greek/punctuation identically and other scripts fall back to generated `s-N` ids."
-            },
-            "bin": [
-                "bin/djot",
-                "bin/djot-watch"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Djot\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP Collective",
-                    "homepage": "https://github.com/php-collective"
-                }
-            ],
-            "description": "A PHP parser for Djot, a modern light markup language",
-            "homepage": "https://php-collective.github.io/djot-php/",
-            "keywords": [
-                "djot",
-                "markdown",
-                "markup",
-                "parser"
-            ],
-            "support": {
-                "issues": "https://github.com/php-collective/djot-php/issues",
-                "source": "https://github.com/php-collective/djot-php/tree/0.1.35"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/dereuromark",
-                    "type": "github"
-                }
-            ],
-            "time": "2026-11-11T11:34:56+00:00",
-            "published-time": "2026-11-11T11:39:34+00:00"
         },
         {
             "name": "phpoption/phpoption",
