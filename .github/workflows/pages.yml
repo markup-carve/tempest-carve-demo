@@ -25,9 +25,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v5
-        with:
-          # build from 0.1 until 0.2.0 is released
-          ref: ${{ github.event_name != 'pull_request' && '0.1' || '' }}
 
       - uses: shivammathur/setup-php@v2
         with:
@@ -53,7 +50,6 @@ jobs:
         run: |
           shopt -s nullglob
           sed -i -E 's#"/(build|favicon)/#"./\1/#g' public/index.html
-          # 0.1 generates no subpages
           for page in public/*/index.html; do
             sed -i -E 's#"/(build|favicon)/#"../\1/#g' "$page"
           done
