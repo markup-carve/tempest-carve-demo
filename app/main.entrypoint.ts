@@ -1,3 +1,9 @@
+import { enhanceCodeBlocks } from './carve-code-blocks.js'
+import { drawDiagrams } from './carve-diagrams'
+
+enhanceCodeBlocks()
+void drawDiagrams()
+
 const links = document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]')
 
 for (const link of links) {

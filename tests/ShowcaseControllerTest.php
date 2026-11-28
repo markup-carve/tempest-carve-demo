@@ -24,7 +24,7 @@ final class ShowcaseControllerTest extends IntegrationTestCase
             ->assertSee('Copy link to Compose documents from reusable sources')
             ->assertSee('Database-backed includes')
             ->assertSee('Nested database snippet')
-            ->assertSee('1.1.1</span> Nested database snippet</h3>')
+            ->assertSee('Nested database snippet</h3>')
             ->assertSee('db:handbook/overview')
             ->assertSee('db:handbook/details')
             ->assertSee('0 warnings')

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1823212649713da37ab55a06ea0cc41f",
+    "content-hash": "8f228372f7fbc878e374582a53cd1dd8",
     "packages": [
         {
             "name": "composer/semver",
@@ -156,8 +156,7 @@
                 "issues": "https://github.com/dflydev/dflydev-dot-access-data/issues",
                 "source": "https://github.com/dflydev/dflydev-dot-access-data/tree/v3.0.3"
             },
-            "time": "2024-07-08T12:26:09+00:00",
-            "published-time": "2024-07-08T12:27:13+00:00"
+            "time": "2024-07-08T12:26:09+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -1127,8 +1126,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-10-31T13:35:37+00:00",
-            "published-time": "2026-10-31T13:35:57+00:00"
+            "time": "2026-10-31T13:35:37+00:00"
         },
         {
             "name": "league/config",
@@ -1210,8 +1208,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-12-11T20:36:23+00:00",
-            "published-time": "2022-12-11T20:36:45+00:00"
+            "time": "2022-12-11T20:36:23+00:00"
         },
         {
             "name": "league/flysystem",
@@ -1473,12 +1470,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/markup-carve/carve-php.git",
-                "reference": "6ceebc52181efc1f5dfe6f5e7964b75c43f13a90"
+                "reference": "193e3a327c8da535cd5319271ba9ccdd928d54bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/markup-carve/carve-php/zipball/6ceebc52181efc1f5dfe6f5e7964b75c43f13a90",
-                "reference": "6ceebc52181efc1f5dfe6f5e7964b75c43f13a90",
+                "url": "https://api.github.com/repos/markup-carve/carve-php/zipball/193e3a327c8da535cd5319271ba9ccdd928d54bf",
+                "reference": "193e3a327c8da535cd5319271ba9ccdd928d54bf",
                 "shasum": ""
             },
             "require": {
@@ -1540,8 +1537,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-11-26T22:53:17+00:00",
-            "published-time": "2026-11-26T22:53:23+00:00"
+            "time": "2026-11-28T00:19:34+00:00"
         },
         {
             "name": "markup-carve/tempest-carve",
@@ -1549,17 +1545,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/markup-carve/tempest-carve.git",
-                "reference": "26b5214a89080469a3026735ab9502a885ad6ee9"
+                "reference": "9d358bc39fb5b4ac063a52090fc8d6c3a86ab899"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/markup-carve/tempest-carve/zipball/26b5214a89080469a3026735ab9502a885ad6ee9",
-                "reference": "26b5214a89080469a3026735ab9502a885ad6ee9",
+                "url": "https://api.github.com/repos/markup-carve/tempest-carve/zipball/9d358bc39fb5b4ac063a52090fc8d6c3a86ab899",
+                "reference": "9d358bc39fb5b4ac063a52090fc8d6c3a86ab899",
                 "shasum": ""
             },
             "require": {
                 "league/commonmark": "^2.9.2",
-                "markup-carve/carve-php": "dev-main#6ceebc52181efc1f5dfe6f5e7964b75c43f13a90",
+                "markup-carve/carve-php": "dev-main#8767d7fcacbba18b7a50ee94cbed5603ead85956",
                 "php": "^8.5",
                 "tempest/cache": "^3.19",
                 "tempest/console": "^3.19",
@@ -1618,8 +1614,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-11-26T21:50:28+00:00",
-            "published-time": "2026-11-26T21:50:33+00:00"
+            "time": "2026-11-27T23:00:19+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1862,8 +1857,7 @@
                 "issues": "https://github.com/nette/schema/issues",
                 "source": "https://github.com/nette/schema/tree/v1.4.0"
             },
-            "time": "2026-10-22T02:12:50+00:00",
-            "published-time": "2026-10-22T02:14:45+00:00"
+            "time": "2026-10-22T02:12:50+00:00"
         },
         {
             "name": "nette/utils",
@@ -1954,8 +1948,7 @@
                 "issues": "https://github.com/nette/utils/issues",
                 "source": "https://github.com/nette/utils/tree/v4.1.6"
             },
-            "time": "2026-10-20T17:07:56+00:00",
-            "published-time": "2026-10-20T17:48:30+00:00"
+            "time": "2026-10-20T17:07:56+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -2574,8 +2567,7 @@
                 "issues": "https://github.com/php-fig/event-dispatcher/issues",
                 "source": "https://github.com/php-fig/event-dispatcher/tree/1.0.0"
             },
-            "time": "2019-01-08T18:20:26+00:00",
-            "published-time": "2019-03-25T15:31:44+00:00"
+            "time": "2019-01-08T18:20:26+00:00"
         },
         {
             "name": "psr/http-client",
@@ -3139,8 +3131,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-09-16T14:15:10+00:00",
-            "published-time": "2026-11-04T11:25:34+00:00"
+            "time": "2026-09-16T14:15:10+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -3885,8 +3876,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-09-23T22:02:09+00:00",
-            "published-time": "2026-09-30T10:23:47+00:00"
+            "time": "2026-09-23T22:02:09+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -4050,8 +4040,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-09-25T15:50:05+00:00",
-            "published-time": "2026-09-30T10:23:35+00:00"
+            "time": "2026-09-25T15:50:05+00:00"
         },
         {
             "name": "symfony/polyfill-uuid",
@@ -6860,5 +6849,5 @@
         "php": "^8.5"
     },
     "platform-dev": {},
-    "plugin-api-version": "2.11.0"
+    "plugin-api-version": "2.9.0"
 }

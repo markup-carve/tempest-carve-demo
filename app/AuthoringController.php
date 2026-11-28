@@ -84,7 +84,7 @@ final readonly class AuthoringController
         $inputs = [
             'Nice /work/, thanks!',
             '= A heading in a comment',
-            'Old habit: a _bare_ underline',
+            'Old habit: **double star** strong',
             str_repeat('Too long. ', 13),
         ];
         $rows = [];

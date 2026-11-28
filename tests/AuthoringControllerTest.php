@@ -17,7 +17,7 @@ final class AuthoringControllerTest extends IntegrationTestCase
         $this->http
             ->get('/authoring')
             ->assertOk()
-            ->assertSee('L1:C15 deprecated-bare-underline')
+            ->assertSee('L1:C15 markdown-strong-double-star')
             ->assertSee('L5:C1 include-no-resolver')
             ->assertSee('L5:C1 include-not-found')
             ->assertSee("|= Step             |= Owner      |\n| Tag the release   | maintainers |");
@@ -43,7 +43,7 @@ final class AuthoringControllerTest extends IntegrationTestCase
             ->assertSee('<td class="valid">Valid</td>')
             ->assertSee('The comment is not accepted: markup is not allowed by the comment profile')
             ->assertSee('The comment is not accepted: must not exceed 120 characters')
-            ->assertSee('The comment is not accepted: A bare underscore pair is text in 0.2.')
+            ->assertSee('The comment is not accepted: Markdown `**strong**` is literal text in Carve')
             ->assertSee('&lt;em&gt;new&lt;/em&gt; version is out.')
             ->assertSee('{&quot;title&quot;:&quot;Release day&quot;,&quot;body&quot;:&quot;= Release day');
     }

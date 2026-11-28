@@ -72,8 +72,10 @@ main { max-width: 1240px; margin: auto; padding: 0 max(5vw, 1.5rem); }
 .carve pre code { color: inherit; background: none; padding: 0; font-size: inherit; }
 .carve table { width: 100%; margin: 1.6rem 0; border-collapse: collapse; font-size: .92em; line-height: 1.5; font-variant-numeric: tabular-nums; }
 .carve caption { caption-side: bottom; padding-top: .7rem; color: #5c6863; font-size: .85em; font-style: italic; text-align: left; }
+.carve figure { margin: 1.6rem 0; }
+.carve figcaption { padding-top: .7rem; color: #5c6863; font-size: .85em; font-style: italic; }
 .carve th, .carve td { padding: .6rem .85rem; border: 1px solid #d8d4c9; vertical-align: top; text-align: left; }
-.carve thead th { background: #132f27; color: #f8f4e8; border-color: #132f27; font-weight: 700; }
+.carve :is(thead th, th[scope="col"]) { background: #132f27; color: #f8f4e8; border-color: #132f27; font-weight: 700; }
 .carve td[rowspan] { vertical-align: middle; }
 .carve tfoot td, .carve tfoot th { font-weight: 700; border-top: 2px solid #132f27; }
 .carve .section-number { color: #6f947f; font-size: .65em; margin-right: .4em; font-variant-numeric: tabular-nums; }
@@ -145,15 +147,9 @@ footer { max-width: 1240px; margin: auto; padding: 2rem max(5vw, 1.5rem) 4rem; b
 .exit-code { float: right; opacity: .7; }
 .console-run { min-height: 0; }
 .console-run .output-label { text-transform: none; letter-spacing: 0; }
-.carve .tabs { display: flex; flex-wrap: wrap; gap: .4rem; margin: 1rem 0; }
-.carve .tabs > input { position: absolute; opacity: 0; }
-.carve .tabs > label { padding: .35rem .8rem; border-radius: 999px; border: 1px solid #c9c6bd; font-size: .85rem; }
-.carve .tabs > input:checked + label { background: #132f27; color: #f8f4e8; }
-.carve .tabs > .tab-panel { display: none; width: 100%; }
-.carve .tabs > input:nth-of-type(1):checked ~ .tab-panel:nth-of-type(1),
-.carve .tabs > input:nth-of-type(2):checked ~ .tab-panel:nth-of-type(2),
-.carve .tabs > input:nth-of-type(3):checked ~ .tab-panel:nth-of-type(3) { display: block; }
-.carve pre.mermaid, .carve pre.plantuml, .carve pre.graphviz { border-left: 4px solid #d8ff65; }
+/* carve-css draws the tabs; this accent matches the demo's links. */
+.carve { --carve-accent: #176f56; }
+.carve tbody tr:last-child :is(th, td) { border-block-end: 1px solid #d8d4c9; }
 .carve details { border: 1px solid #c9c6bd; border-radius: 10px; padding: .6rem 1rem; margin: 1rem 0; }
 .carve summary { font-weight: 650; }
 .carve .spoiler { background: #17231f; color: #17231f; border-radius: 4px; padding: 0 .2rem; }
@@ -169,3 +165,29 @@ footer { max-width: 1240px; margin: auto; padding: 2rem max(5vw, 1.5rem) 4rem; b
   .feature-strip { margin-bottom: 4rem; }
   footer { flex-direction: column; gap: .5rem; }
 }
+
+/* carve-css (loaded before this file) styles the Carve output; these tokens put its code chrome on the dark code panel. */
+.carve .code-block, .carve pre {
+  --carve-sunk: #0b231d;
+  --carve-rule: #ffffff25;
+  --carve-ink: #eaf2ee;
+  --carve-ink-soft: #9fb5ac;
+  --carve-radius: 10px;
+  --carve-accent: #d8ff65;
+  --carve-success: #d8ff65;
+  --carve-font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+  --carve-code-line-number: #7f9a90;
+  --carve-code-line-highlight: rgb(216 255 101 / 14%);
+  --carve-code-line-marker: #d8ff65;
+}
+.carve pre { border: 0; }
+.carve .code-header { border-color: transparent; border-bottom-color: #ffffff1a; }
+/* Token colors inside the dark code panel; the light ones above are for code on the page. */
+.carve pre .hl-keyword { color: #f0a6ff; }
+.carve pre .hl-type { color: #ffd479; }
+.carve pre .hl-property { color: #8fc7ff; }
+.carve pre .hl-variable { color: #9be7c4; }
+.carve pre .hl-value, .carve pre .hl-number { color: #ffb38a; }
+.carve pre .hl-comment { color: #7f9a90; }
+.carve .diagram-drawn { margin: 1.2rem 0; padding: 1rem; background: #fff; border: 1px solid #d8d4c9; border-radius: 10px; text-align: center; overflow-x: auto; }
+.carve .diagram-drawn svg { max-width: 100%; height: auto; }

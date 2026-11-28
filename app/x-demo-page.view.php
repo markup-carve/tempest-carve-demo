@@ -10,6 +10,7 @@ $root = $base === '' ? './' : $base;
 $pages = [
     'showcase' => [$root, 'Showcase'],
     'extensions' => [$root . 'extensions/', 'Extensions & options'],
+    'code-lines' => [$root . 'code-lines/', 'Code lines'],
     'authoring' => [$root . 'authoring/', 'Authoring tools'],
     'console' => [$root . 'console/', 'Console'],
 ];
@@ -24,6 +25,7 @@ $pages = [
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
   <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
   <title>{{ $title }}</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/markup-carve/carve-css@5c3547fe489ea86c42eed08e9b27639ac81d72f5/src/carve.css">
   <x-vite-tags />
 </head>
 <body>
